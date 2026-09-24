@@ -1,0 +1,66 @@
+php.ini
+.user.ini
+
+# ==========================================
+# Database dumps & backups
+# ==========================================
+*.sql
+*.sql.gz
+*.bak
+*.backup
+*.zip
+*.tar.gz
+*.rar
+
+# ==========================================
+# Logs
+# ==========================================
+error_log
+*.log
+
+# ==========================================
+# User uploaded content (not source code)
+# ==========================================
+admin/upload/uploads/*
+admin/img/*
+!admin/upload/uploads/.gitkeep
+
+# Local scratch/source images not used by the site
+admin/img/*-source.jpg
+
+# ==========================================
+# Dependencies installed via package managers
+# (htpd/vendor and los/vendor have no composer.json,
+#  so they are intentionally kept in the repo)
+# ==========================================
+/vendor/
+node_modules/
+
+# ==========================================
+# Cache / temp
+# ==========================================
+cache/
+tmp/
+temp/
+*.tmp
+*.cache
+
+# ==========================================
+# IDE / editor / tooling
+# ==========================================
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.claude/
+.env
+.htaccess
+*.swp
+*~
+
+# ==========================================
+# OS files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini

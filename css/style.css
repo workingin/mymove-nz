@@ -1,0 +1,213 @@
+/* 
+    Document   : style.css
+    Created on : 19-Apr-2014, 11:18:35
+    Author     : Richard
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+ * Copyright (c) 2012 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * View the Sass/SCSS source at:
+ * http://www.cssflow.com/snippets/login-form/demo/scss
+ *
+ * Original PSD by Orman Clark: http://goo.gl/D8zmk
+ */
+
+@import "http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
+
+@font-face {
+  font-family: helveticanow;
+  src: url(/assets/fonts/HelveticaNowDisplay-Regular.otf);
+}
+@font-face {
+  font-family: helveticanow-bold;
+  src: url(/assets/fonts/HelveticaNowDisplay-Bd.otf);
+}
+
+body {
+  font: 13px/20px helveticanow ,"Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #303988;
+}
+
+.login {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:calc(50vh - 320px);
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+  border-radius: 8px;
+  /*-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);*/
+}
+
+/*.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}*/
+
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.login p {
+  margin: 10px 0 0;
+}
+
+.login p:first-child {
+  margin-top: 0;
+}
+
+.login input[type=text], .login input[type=password] {
+  width: 278px;
+}
+
+.login p.remember_me {
+  line-height: 31px;
+}
+
+.login p.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+
+.login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.login p.submit {
+  text-align: right;
+}
+
+.form-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+
+.form-help a {
+  color: #cce7fa;
+  text-decoration: none;
+}
+
+.form-help a:hover {
+  text-decoration: underline;
+}
+
+:-moz-placeholder {
+  color: #616161 !important;
+  font-size: 13px;
+  line-height:32px;
+}
+
+::-webkit-input-placeholder {
+  color: #616161;
+  font-size: 13px;
+  line-height:32px;
+}
+
+input {
+  font-family: helveticanow, 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 40px;
+  color: #404040;
+  background: #F5F5F5;
+  border: 1px solid #D1D1D1;
+  border-radius: 8px;
+  -moz-outline-radius: 8px;
+  /*outline: 2px solid #eff4f7;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);*/
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  margin: 5px 0;
+  /*opacity: 0.85;*/
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #303998;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #535DC9;
+}
+
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+  line-height: 34px;
+}
+
+.block {
+    border: 1px solid #dbe1e8;
+}
+
+.captchsize {
+    transform:scale(1.02);
+    -webkit-transform:scale(1.02);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+}
+
+

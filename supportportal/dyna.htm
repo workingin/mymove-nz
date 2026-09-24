@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<meta charset="UTF-8">
+
+		<title>Dynamic Content With Geo IP &amp; JS</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+		
+		<link rel="stylesheet" href="Dynamic%20Content%20With%20Geo%20IP%20&amp;%20JS_files/normalize.css">
+		
+		<style>
+			body {
+				background: #f7f7f7;
+				color: #666;
+				padding: 50px;
+			}
+			
+			.header {
+				border-bottom: 1px solid #eaeaea;
+				margin: 0 auto 30px;
+				max-width: 1200px;
+			}
+			
+			.header h1 {
+				display: inline-block;
+				width: 80%;
+				vertical-align: middle;
+			}
+			
+			.header img {
+				display: inline-block;
+				height: auto;
+				width: 19%;
+				vertical-align: middle;
+			}
+			
+			.container {
+				background: #fff;
+				margin: 0 auto 25px;
+				max-width: 1200px;
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+			}
+			
+			.inner {
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			
+			h2 {
+				color: #111;
+				font-size: 1.6em;
+				display: block;
+				margin-bottom: 20px;
+			}
+			
+			h3 {
+				color: #09c;
+				font-size: 1.3em;
+				display: block;
+				margin-bottom: 10px;
+			}
+			
+			a {
+				color: #09c;
+			}
+			
+			.update_price {
+				display: inline-block;
+				margin: 15px 10px;
+				padding: 10px 20px;
+				border-radius: 4px;
+				color: #fff;
+				font-size: 1.4em;
+				font-weight: 700;
+				background: #09c;
+			}
+			
+			pre {
+				padding: 20px;
+				text-align: left;
+				background: #f7f7f7;
+				border: 1px solid #eaeaea;
+				margin: 40px auto;
+				max-width: 780px;
+			}
+			
+			
+			
+		</style>
+
+		<script type="text/javascript" async="" src="Dynamic%20Content%20With%20Geo%20IP%20&amp;%20JS_files/ga.js"></script><script src="Dynamic%20Content%20With%20Geo%20IP%20&amp;%20JS_files/jquery.js"></script>
+		
+		<script type="application/javascript">
+		function get_url_param() {
+		
+			var vars = {};
+			
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			
+			return vars;
+			
+		}
+		
+		function geoip(json){
+		
+			// Get the country URL parameter
+			country_param = get_url_param()['country'];
+			
+			// If the country parameter is not empty, then use this value
+			if(country_param != null) {
+				country_code = country_param;
+			} else {
+				// Else use the GEO IP location
+				country_code = json.country_code;
+			}
+			
+			var price_obj = {
+				prices: {
+					GB: '£9.99',
+					US: '$12.99',
+					CA: '$12.99',
+					SA: 'R 119',
+					AU: '$14.99',
+					NZ: '$15.99',
+					NL: '11.99€',
+					FR: '11.99€',
+					IN: '119 ₹',
+					JP: 'JP¥800',
+				}
+			},
+			get_price = price_obj[ 'prices' ][ country_code ],
+			price_elem = document.getElementsByClassName('update_price');
+			
+			if(get_price == null) {
+				display_price = '$12.99';
+			} else {
+				display_price = get_price;
+			}
+			
+			for (var i = 0; i < price_elem.length; i++) {
+			  var str = price_elem[i].innerHTML;
+			  price_elem[i].innerHTML = display_price;
+			}
+
+		}
+		</script>
+		<script async="" src="Dynamic%20Content%20With%20Geo%20IP%20&amp;%20JS_files/geo.js"></script>
+
+
+	</head>
+
+	<body>
+
+
+		
+		<div class="container">
+		
+			<div class="inner">
+				TEST.....<div class="update_price"></div>
+				
+				
+			
+				
+
+
+			</div>
+		
+		</div>
+		
+
+	
+
+</body></html>
